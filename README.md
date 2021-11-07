@@ -35,11 +35,19 @@ An extra ball every time you reach 10.000 points.
 
 Try to reach 20.000 points. 
 
-### Development 
+## Development 
 
 This game has been designed with box2D and SDL.
 
-First of all we loaded the background map to be able to adjust the hitboxes of all the elements, we had some problem since hitboxes got in the way but they were fixed quickly. 
+### Bugs 
+
+Hitbox position and size caused a lot of game bugs, fixed by redoing the hitboxis to a proper size.
+
+Ball hitbox is not in the same position as the ball, it still interacts well with other game elements besides the 3 bumpers. (No fix has been found)
+
+If ball exceed max speed while interacting with map sensors they will not react in time and the ball would go out of the map, slower ball velocity fixed this.
+
+Map sensor would not work after reseting the ball, to fix this we created another sensor at the begging of the kicker.
 
 ### Links
 
@@ -56,3 +64,11 @@ No catch pokemon/bonus map
 Only the main loop was implemented
 
 Missing some animations that are not relevant to gameplay
+
+### Authors
+
+Angel Consola
+
+Juand de Dios Garcia Salguero
+
+Luis Fernandez Diaz
