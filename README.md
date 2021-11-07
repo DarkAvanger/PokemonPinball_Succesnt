@@ -69,6 +69,6 @@ Missing some animations that are not relevant to gameplay
 
 Angel Consola
 
-Juand de Dios Garcia Salguero
+Juan de Dios Garcia Salguero
 
 Luis Fernandez Diaz
