@@ -32,14 +32,18 @@ int main(int argc, char ** argv)
 
 	while (state != MAIN_EXIT)
 	{
-		// Steady frames
-		double t = 0.0;
-		float dt = 16;
-		auto start = chrono::steady_clock::now();
-		auto end = chrono::steady_clock::now();
-		auto telapsed = chrono::duration_cast<chrono::milliseconds>(end - start).count();
-		if (dt - telapsed > 0.0f)
-			Sleep(dt - telapsed);
+		const int FPS = 60;
+		const int frameDelay = 1000 / FPS;
+
+		Uint32 frameStart;
+		int frameTime;
+
+		frameStart = SDL_GetTicks();
+		frameTime = SDL_GetTicks() - frameStart;
+
+		if (frameDelay > frameTime) {
+			SDL_Delay(frameDelay - frameTime);
+		}
 
 		switch (state)
 		{
